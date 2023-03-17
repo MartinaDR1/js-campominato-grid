@@ -16,4 +16,23 @@ header{
 /*Main*/
 .container{
     display: flex;
+    flex-wrap: wrap;
+    width: 1200px;
+    margin: auto;
+    
+}
+
+.cell{
+    width: calc(100% / 10);
+    aspect-ratio: 1;
+    border: 1px solid;
+    background-color: aquamarine;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg_active{
+    background-color: greenyellow;
 }
