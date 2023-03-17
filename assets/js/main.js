@@ -13,6 +13,20 @@ btnSend.addEventListener('click', function(){
         containerEl.innerHTML += cellDom
 
     }
+
+    //Seleziono tutte le celle
+    const cells = document.querySelectorAll('.cell');
+
+    // Seleziono ogni cella
+    for (let i = 0; i < cells.length; i++) {
+        
+        const thisCell = cells[i];
+
+        //Aggiungo un event listener al click
+        thisCell.addEventListener('click', function() {
+            thisCell.classList.toggle('bg_active');
+            console.log(`hai cliccato la casella ${thisCell.innerHTML}`);
+        })
+    }
+
 })
-
-
