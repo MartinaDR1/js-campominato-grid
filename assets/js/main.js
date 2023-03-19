@@ -9,6 +9,7 @@ const footerEl = document.querySelector('footer')
 
 btnSend.addEventListener('click', function(){
     containerEl.innerHTML = '';
+    
 
     if(selectEl.value == 'easy'){
         cellContainer (100, 'easy')
@@ -43,6 +44,15 @@ function cellContainer (maxCells, difficulty){
         thisCell.addEventListener('click', function() {
             thisCell.classList.toggle('bg_active');
             console.log(`Hai cliccato la casella ${thisCell.innerHTML}`);
-        })
+        }) 
+        
+        if(selectEl.value == 'easy'){
+            thisCell.style.width='calc(100% / 10)'
+        } else if (selectEl.value == 'medium'){
+            thisCell.style.width='calc(100% / 9)'
+        } else {
+            thisCell.style.width='calc(100% / 7)'
+        }
     }
+
 }
